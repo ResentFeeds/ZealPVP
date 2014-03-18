@@ -2,6 +2,7 @@ package me.skylertyler.zealpvp;
 
 import me.skylertyler.zealpvp.Listeners.ZealPVPListener;
 import me.skylertyler.zealpvp.commands.PvPCommand;
+import me.skylertyler.zealpvp.commands.KitsCommand;
 
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.PluginManager;
@@ -18,6 +19,7 @@ public class ZealPvP extends JavaPlugin{
 	pm.registerEvents(new ZealPVPListener(this), this);
 	//Commands
 	getCommand("pvp").setExecutor(new PvPCommand(this));
+	getCommand("kits").setExecutor(new KitsCommand(this));
 	}
 	
 	@Override
